@@ -1,0 +1,103 @@
+/* ====== HEADER WRAPPER ====== */
+.h-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background: #000; /* black background */
+  color: #fff;
+}
+
+/* ====== CONTAINER ====== */
+.h-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ====== MENU ====== */
+.h-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.h-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+/* ====== BUTTON ====== */
+.button {
+  background: #ff0000;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background: #ff3030;
+}
+
+/* ====== MENU ICON ====== */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1;
+}
+
+/* ====== MOBILE VIEW ====== */
+@media (max-width: 800px) {
+  .h-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.95);
+    height: 100vh;
+    width: 70%;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+  }
+
+  /* When menuOpened = true, the inline style from JSX will move it to right: 0 */
+  .h-menu a {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* ====== SMOOTH LOGO BEHAVIOR ====== */
+.h-container img {
+  width: 100px;
+  object-fit: contain;
+}
+
+@media (max-width: 500px) {
+  .h-container img {
+    width: 80px;
+  }
+}
+
+

@@ -1,0 +1,111 @@
+.v-container .image-container {
+  border: 8px solid rgba(232, 232, 232, 0.93);
+}
+
+.v-container > div {
+  flex: 1;
+}
+
+.v-right {
+  gap: 0.5rem;
+}
+
+.accordion {
+  margin-top: 2rem;
+  border: none;
+}
+
+.accordionItem {
+  background: white;
+  border: 0.8px solid rgba(128, 128, 128, 0.143);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.accordionItem.expanded {
+  box-shadow: var(--shadow);
+  border-radius: 6px;
+}
+
+.accordionButton {
+  background: white;
+  padding: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.icon {
+  padding: 10px;
+  background: #eeeeff;
+  border-radius: 5px;
+}
+
+.icon svg {
+  fill: var(--blue);
+}
+
+.accordionButton .primaryText {
+  font-size: 1.1rem;
+}
+
+/* -------------------------- */
+/* ✅ RESPONSIVE STYLING */
+/* -------------------------- */
+
+@media (max-width: 1024px) {
+  .v-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .v-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .accordionButton {
+    flex-direction: row;
+  }
+
+  .accordionButton .primaryText {
+    font-size: 1rem;
+  }
+
+  .v-container .image-container {
+    width: 90%;
+    max-width: 22rem;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .v-right .primaryText {
+    font-size: 1.4rem;
+  }
+
+  .v-right .secondaryText {
+    font-size: 0.9rem;
+  }
+
+  .accordionButton {
+    padding: 0.8rem;
+  }
+
+  .icon {
+    padding: 8px;
+  }
+
+  .accordionButton .primaryText {
+    font-size: 0.95rem;
+  }
+
+  .v-container .image-container {
+    width: 100%;
+    max-width: 18rem;
+  }
+}
+

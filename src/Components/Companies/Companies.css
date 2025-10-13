@@ -1,0 +1,47 @@
+.c-container {
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  gap: 1.5rem;
+}
+
+.c-container > img {
+  width: 9rem;
+  transition: transform 0.3s ease;
+}
+
+/* Add a subtle hover effect */
+.c-container > img:hover {
+  transform: scale(1.05);
+}
+
+/* 🔹 Tablet screens */
+@media (max-width: 1024px) {
+  .c-container > img {
+    width: 7rem;
+  }
+}
+
+/* 🔹 Mobile screens */
+@media (max-width: 768px) {
+  .c-container {
+    gap: 2rem;
+  }
+
+  .c-container > img {
+    width: 6rem;
+  }
+}
+
+/* 🔹 Small phones */
+@media (max-width: 480px) {
+  .c-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .c-container > img {
+    width: 8rem;
+  }
+}
+

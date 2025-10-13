@@ -1,0 +1,175 @@
+.hero-wrapper {
+  color: white;
+  position: relative;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* ---------- Left Side ---------- */
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title > h1 {
+  font-weight: 600;
+  font-size: 3.8rem;
+  line-height: 4rem;
+}
+
+.orange-circle {
+  height: 4rem;
+  width: 4rem;
+  background: var(--orange-gradient);
+  border-radius: 100%;
+  position: absolute;
+  right: 28%;
+  top: -10%;
+  z-index: -1;
+}
+
+.search-bar {
+  background: white;
+  border-radius: 5px;
+  border: 3px solid rgba(120, 120, 120, 0.374);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-bar > input {
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stat > :nth-child(1) {
+  font-size: 2rem;
+}
+
+.stat > :nth-child(1) > :last-child {
+  color: orange;
+}
+
+/* ---------- Right Side ---------- */
+
+.image-container {
+  width: 30rem;
+  height: 35rem;
+  overflow: hidden;
+  border-radius: 15rem 15rem 0 0;
+  border: 8px solid rgba(255, 255, 255, 0.12);
+  flex-shrink: 0;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Responsive Design ---------- */
+
+/* For large tablets */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-title > h1 {
+    font-size: 3rem;
+    line-height: 3.4rem;
+  }
+
+  .search-bar {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .image-container {
+    width: 25rem;
+    height: 30rem;
+  }
+}
+
+/* For small tablets and mobile */
+@media (max-width: 768px) {
+  .hero-title > h1 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  .orange-circle {
+    right: 20%;
+    top: -15%;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .stats {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .image-container {
+    width: 20rem;
+    height: 25rem;
+  }
+}
+
+/* For small phones */
+@media (max-width: 480px) {
+  .hero-wrapper {
+    padding-bottom: 1rem;
+  }
+
+  .hero-title > h1 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    padding-left: 40px;
+  }
+
+  .image-container {
+    width: 16rem;
+    height: 20rem;
+  }
+
+  .search-bar {
+    padding: 0.5rem;
+  }
+}
